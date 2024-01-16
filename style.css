@@ -25,7 +25,7 @@ header {
  
 #enter {
   color: #fff;
-  font-family: FiraGO,sans-serif;
+  font-family: FiraGO;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -48,13 +48,73 @@ nav{
 
 h1{
 color: #1A1A1F;
-font-family: FiraGO,sans-serif;
+font-family: FiraGO;
 font-size: 64px;
 font-style: normal;
 font-weight: 700;
 line-height: 72px;
 }
+main{
+  margin-top: 60px;
+}
 
+.categories {
+  gap: 20px;
+}
+.categories button {
+  height: 32px;
+  border-radius: 30px;
+  font-family: FiraGO;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+
+  text-align: center;
+
+}
+
+
+
+
+
+#market {
+  width: 83px;
+  
+  background: rgba(255, 184, 47, 0.08);
+  color: #D6961C;
+
+}
+#application{
+  width: 97px;
+  background: rgba(28, 214, 125, 0.08);
+  color: #15C972;
+
+}
+#al{
+  width: 178px;
+  background: rgba(177, 28, 214, 0.08);
+  color: #B71FDD;
+}
+#ui-ux{
+  width: 65px;
+color: #DC2828;
+ background: rgba(250, 87, 87, 0.08);
+}
+#research{
+  width: 77px;
+color: #60BE16;
+background: rgba(112, 207, 37, 0.08);
+
+
+}
+#figma{
+  width: 64px;
+  background: rgba(8, 210, 174, 0.08);
+  color: #1AC7A8;
+
+
+}
 /* .logins{
   width: 400px;
   height: 300px;
