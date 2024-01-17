@@ -1,15 +1,35 @@
 
-const button = document.getElementById("enter")
 
-const login = document.querySelector(".logins")
-const exit = document.querySelector(".exit")
-button.addEventListener("click", () =>{
-    login.style.display = "flex"
+
+
+
+const stators = [
+    {
+        fullName:"ნია გოგსაძე",
+        releaseDate: "02.11.2023",
+        title: "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
+        categories: ["მარკეტი","აპლიკაცია","ხელოვნური ინტელექტი"],
+         about:"6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი..."
+    },
+    {
+        fullName:" თორნიკე მამასახლისი",
+        releaseDate: "02.11.2023",
+        title: "მოსმენა ყველს უფრო გემრიელს ხდის?",
+        categories: ["UI/UX","კვლევა"],
+         about:"6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი..."
+    },
+    {
+        fullName:"კობა ბელთაძე",
+        releaseDate: "02.11.2023",
+        title: "მობილური ფოტოგრაფიის კონკურსის გამარჯვებულთა ვინაობა ცნობილია. მ...",
+        categories: ["Figma"," UI/UX"],
+         about:"6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი..."
+    }
+]
+
+
+
+
+const mapped = stators.map((statia)=> {
+    console.log(statia);
 })
-
-
-exit.addEventListener("click",() => {
-    login.style.display = "none"
-})
-
-

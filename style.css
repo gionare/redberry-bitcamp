@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  font-family: firaGO;
   height: 100vh;
   background: #f3f2fa;
 }
@@ -36,6 +39,10 @@ header {
   border-radius: 8px;
   background: #5d37f3;
 }
+#enter:hover {
+  cursor: pointer;
+  background: #766CF1;
+}
 
 
 nav{
@@ -56,12 +63,18 @@ line-height: 72px;
 }
 main{
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.categories {
+#categories {
+  flex-direction: row;
   gap: 20px;
 }
-.categories button {
+#categories button {
   height: 32px;
   border-radius: 30px;
   font-family: FiraGO;
@@ -69,15 +82,10 @@ main{
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-
+  border: none;
   text-align: center;
 
 }
-
-
-
-
-
 #market {
   width: 83px;
   
@@ -114,6 +122,92 @@ background: rgba(112, 207, 37, 0.08);
   color: #1AC7A8;
 
 
+}
+.cards{
+  width: 1288px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px 32px;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-bottom: 50px;
+}
+#card{
+  width: 408px;
+  height: 620px;
+ 
+  border-radius: 5px;
+  gap: 24px;
+}
+#title{
+display: flex;
+flex-direction: column;
+  gap: 16px;
+}
+#title-author-releaseDate{
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+h5{
+  width: 408px;
+  color: #1A1A1F;
+font-family: FiraGO,sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px
+}
+span{
+  color: #85858D;
+
+font-family: FiraGO,sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px
+}
+
+#title-heading {
+  color: #1A1A1F;
+font-family: FiraGO;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px
+
+}
+#about-title {
+  color: #404049;
+  width: 408px;
+font-family: FiraGO;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px
+}
+#see-more{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+a{
+  color: #5D37F3;
+ text-decoration: none;
+font-family: FiraGO;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px
+}
+.mutual-categories{
+  display: flex;
+}
+.mutual-categories button {
+  border: none;
 }
 /* .logins{
   width: 400px;
