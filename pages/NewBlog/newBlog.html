@@ -11,41 +11,46 @@
   <body>
 
     <header class="header">
-      <img src="././src/logo.png" alt="logo" />
+      <div class="header-img">
+        <img src="../logo.png" alt="Logo">
+      </div>
     </header>
 
     <main>
         <h2>ბლოგის დამატება</h2>
 
-        <form class="information-form" action="submit" method="post">
+        <div class="information-form" action="submit" method="post">
 
           <!-- Upload picture -->
           <div class="picture-upload">
-            <label for="picture">ატვირთეთ ფოტო</label>
+            <label id="upload-picture" for="picture">ატვირთეთ ფოტო</label>
             <div class="picture-upload-container">
+              <img src="../folder-add.png" alt="folder-add">
               <form action="">
-                <label for="img">ჩააგდე ფაილი აქ ან <u>აირჩიე ფაილი</u></label>
-                <input type="file" id="img" name="img" accept="image/*" />
-                <input type="submit" />
+                <label for="img">ჩააგდე ფაილი აქ ან
+                  <span style="cursor: pointer;"><b><u>აირჩიეთ ფაილი</u></b></span>
+                  <input type="file" id="img" name="img" accept="image/*" style="display: none;"/>
+                </label> 
               </form>
             </div>
+
           </div>
 
           <!-- author -->
-          <div class="author">
+          <div class="container author" id="author">
             <label for="name">ავტორი *</label>
             <input
               type="text"
-              placeholder="შეიყვანეთ ავტორი"
-              id="name"
               class="inputText"
+              id="name"
+              placeholder="შეიყვანეთ ავტორი"
               name="name"
               required
               minlength="4"
               required
               pattern="[a-zA-Z]{2,}"
             />
-            <ul>
+            <ul class="instruction">
               <li>მინიმუმ 4 სიმბოლო</li>
               <li>მინიმუმ 2 სიტყვა</li>
               <li>მხოლოდ ქართული სიმბოლოები</li>
@@ -53,29 +58,30 @@
           </div>
 
           <!-- title -->
-          <div class="title">
+          <div class="container title" id="title">
             <label for="name">სათაური *</label>
-            <input type="text" class="inputText" required minlength="2" />
-            <span>მინიმუმ 2 სიმბოლო</span>
+            <input type="text" class="inputText" id="title" placeholder="შეიყვანეთ სათაური" minlength="2" />
+            <span class="instruction">მინიმუმ 2 სიმბოლო</span>
           </div>
 
           <!-- description -->
           <div class="description">
             <label for="description">აღწერა *</label>
-            <input type="text" placeholder="შეიყვანეთ აღწერა"/>
-            <span>მინიმუმ 2 სიმბოლო</span>
+            <textarea placeholder="შეიყვანეთ აღწერა" id="description" name="description" required minlength="2"></textarea>
+            <span class="instruction">მინიმუმ 2 სიმბოლო</span>
           </div>
 
+
           <!-- publish date -->
-          <div class="publishDate">
+          <div class="container publishDate">
             <label for="publishDate">გამოქვეყნების თარიღი *</label>
-            <input id="todayDate" type='date' name="publishDate" placeholder="" required></input>
+            <input class="inputText" id="todayDate" type='date' name="publishDate" placeholder="" required></input>
           </div>
 
           <!-- category -->
-          <div class="category">
+          <div class="container category">
             <label for="category">კატეგორია *</label>
-            <select name="category" id="category-select">
+            <select class="inputText" name="category" id="category-select">
               <option value="">აირჩიეთ კატეგორია</option>
               <option value="მარკეტი">მარკეტი</option>
               <option value="აპლიკაცია">აპლიკაცია</option>
@@ -87,11 +93,13 @@
           </div>
 
           <!-- email -->
-          <div classs="'email">
-            <label for="email">ელ-ფოსტა</div>
-            <input type="email" id="email" pattern=".+@redberry\.ge" size="30 required" placeholder="Example@redberry.ge">
-          </div>    
-        </form>
+          <div class="container email">
+            <label for="email">ელ-ფოსტა</label>
+            <input class="inputText" type="email" id="email" pattern=".+@redberry\.ge" size="30 required" placeholder="Example@redberry.ge">
+          
+          </div>   
+
+        </div>
       
 
         <div class="submit">
