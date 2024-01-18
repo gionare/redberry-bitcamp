@@ -77,6 +77,7 @@ main {
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  gap: 24px;
 }
 ul {
   display: flex;
@@ -84,6 +85,20 @@ ul {
   align-items: center;
   gap: 24px;
   list-style: none;
+}
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border-radius: 30px;
+  font-family: FiraGO;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border: none;
+  text-align: center;
 }
 li {
   display: flex;
