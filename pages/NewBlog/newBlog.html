@@ -60,20 +60,20 @@
           <!-- title -->
           <div class="container title" id="title">
             <label for="name">სათაური *</label>
-            <input type="text" class="inputText" id="title" placeholder="შეიყვანეთ სათაური" minlength="2" />
+            <input type="text" class="inputText" id="title-heading" placeholder="შეიყვანეთ სათაური" minlength="2" />
             <span class="instruction">მინიმუმ 2 სიმბოლო</span>
           </div>
 
           <!-- description -->
           <div class="description">
             <label for="description">აღწერა *</label>
-            <textarea placeholder="შეიყვანეთ აღწერა" id="description" name="description" required minlength="2"></textarea>
+            <textarea placeholder="შეიყვანეთ აღწერა" id="about-title" name="description" required minlength="2"></textarea>
             <span class="instruction">მინიმუმ 2 სიმბოლო</span>
           </div>
 
 
           <!-- publish date -->
-          <div class="container publishDate">
+          <div class="container publishDate" id="title-author-releaseDate">
             <label for="publishDate">გამოქვეყნების თარიღი *</label>
             <input class="inputText" id="todayDate" type='date' name="publishDate" placeholder="" required></input>
           </div>
@@ -81,14 +81,14 @@
           <!-- category -->
           <div class="container category">
             <label for="category">კატეგორია *</label>
-            <select class="inputText" name="category" id="category-select">
+            <select class="inputText" name="category" id="categories">
               <option value="">აირჩიეთ კატეგორია</option>
-              <option value="მარკეტი">მარკეტი</option>
-              <option value="აპლიკაცია">აპლიკაცია</option>
-              <option value="ხელოვნური ინტელექტი">ხელოვნური ინტელექტი</option>
-              <option value="UI/UX">UI/UX</option>
-              <option value="კვლევა">კვლევა</option>
-              <option value="Figma">Figma</option>
+              <option value="მარკეტი" id="market">მარკეტი</option>
+              <option value="აპლიკაცია" id="application">აპლიკაცია</option>
+              <option value="ხელოვნური ინტელექტი" id="ai">ხელოვნური ინტელექტი</option>
+              <option value="UI/UX" id="ui-ux">UI/UX</option>
+              <option value="კვლევა" id="research">კვლევა</option>
+              <option value="Figma" id="figma">Figma</option>
             </select>
           </div>
 

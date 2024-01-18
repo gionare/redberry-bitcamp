@@ -81,8 +81,8 @@ main {
   margin-top: 8px;
 }
 
-/* -- Description -- */
-#description {
+/* -- Description --- lukastan - about-title -- */
+#about-title {
   width: 600px;
   height: 124px;
   flex-shrink: 0;
