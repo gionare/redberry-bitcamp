@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../common.css" />
     <link rel="stylesheet" href="newBlog.css" />
-    <script src="./newBlog.js" rebel></script>
+    <script src="./newBlog.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -17,9 +17,11 @@
     </header>
 
     <main>
-        <h2>ბლოგის დამატება</h2>
+        <div>
+          <h2>ბლოგის დამატება</h2>
+        </div>
 
-        <div class="information-form" action="submit" method="post">
+        <div class="information-form" >
 
           <!-- Upload picture -->
           <div class="picture-upload">
@@ -50,7 +52,7 @@
               required
               pattern="[a-zA-Z]{2,}"
             />
-            <ul class="instruction">
+            <ul class="instruction" id="instruction-list">
               <li>მინიმუმ 4 სიმბოლო</li>
               <li>მინიმუმ 2 სიტყვა</li>
               <li>მხოლოდ ქართული სიმბოლოები</li>
@@ -60,15 +62,15 @@
           <!-- title -->
           <div class="container title" id="title">
             <label for="name">სათაური *</label>
-            <input type="text" class="inputText" id="title-heading" placeholder="შეიყვანეთ სათაური" minlength="2" />
-            <span class="instruction">მინიმუმ 2 სიმბოლო</span>
+            <input class="inputText" id="title-heading" name="name" type="text" placeholder="შეიყვანეთ სათაური" minlength="2" required/>
+            <span class="instruction" id="title-instruction">მინიმუმ 4 სიმბოლო</span>
           </div>
 
           <!-- description -->
           <div class="description">
             <label for="description">აღწერა *</label>
             <textarea placeholder="შეიყვანეთ აღწერა" id="about-title" name="description" required minlength="2"></textarea>
-            <span class="instruction">მინიმუმ 2 სიმბოლო</span>
+            <span class="instruction" id="desc-instruction" >მინიმუმ 2 სიმბოლო</span>
           </div>
 
 
@@ -96,17 +98,24 @@
           <div class="container email">
             <label for="email">ელ-ფოსტა</label>
             <input class="inputText" type="email" id="email" pattern=".+@redberry\.ge" size="30 required" placeholder="Example@redberry.ge">
-          
           </div>   
+          <div id="error"></div>
 
         </div>
       
 
         <div class="submit">
-          <button class="submit-btn">გამოქვეყნება</button>
+          <button class="submit-btn" onclick="openPopup()">გამოქვეყნება</button>
         </div>
 
     </main>
+    
+      <!-- /* ----------------------- submit button Popup ----------------------- */ -->
+      <div class="popup" id="popup">
+        <img src="../tick-circle.svg" alt="">
+        <h3>ჩანაწერი წარმატებით დაემატა</h3>
+        <button type="button" onclick="closePopup()"><p>მთავარ გვერდზე დაბრუნება</p></button>
+      </div>
 
   </body>
 </html>
