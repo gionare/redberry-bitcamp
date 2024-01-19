@@ -1,5 +1,6 @@
 body {
   font-family: "FiraGO", sans-serif;
+  background: #fbfaff;
 }
 
 /* for all labels */
@@ -27,10 +28,11 @@ label {
 
 /* ____ Main ____ */
 main {
-  /* border: solid; */
+  border: solid;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+
   gap: 40px;
 }
 
@@ -38,8 +40,6 @@ main {
 .information-form {
   /* border: solid; */
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
   width: 600px;
   gap: 24px;
   flex-wrap: wrap;
@@ -81,6 +81,25 @@ main {
   margin-top: 8px;
 }
 
+.title-heading.valid {
+  border: 1px solid #14d81c;
+  background: #f8fff8;
+}
+/* title - input & span  */
+.instruction.invalid {
+  color: #ea1919;
+}
+.inputText.invalid {
+  border-radius: 12px;
+  border: 1px solid #ea1919;
+  background: #faf2f3;
+}
+
+/* author - input & ul - li */
+#instruction-list li.invalid {
+  color: #ea1919;
+}
+
 /* -- Description --- lukastan - about-title -- */
 #about-title {
   width: 600px;
@@ -96,6 +115,88 @@ main {
   margin-left: 16px;
   margin-top: 12px;
 }
+#desc-instruction.invalid {
+  color: #ea1919;
+}
 /* -- publish date -- */
 /* -- category -- */
 /* -- Email -- */
+
+/* submit button */
+.submit {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-btn {
+  display: flex;
+  width: 288px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4721dd;
+  color: white;
+}
+
+<!-- /* ----------------------- submit button Popup ----------------------- */ -->
+
+.popup {
+  /* border: solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  padding: 40px;
+  background-color: #fff;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  position: absolute;
+  visibility: hidden;
+  transition: transform 0.6s, top 0.6s;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+}
+.popup h3 {
+  color: #1a1a1f;
+  text-align: center;
+  font-family: FiraGO;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  margin: 20px 0 40px 0;
+}
+
+.popup button {
+  display: flex;
+  width: 432px;
+  padding: 7px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #5d37f3;
+}
+.popup button p {
+  color: #fff;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px; /* 142.857% */
+}
