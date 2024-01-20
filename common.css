@@ -1,8 +1,6 @@
 /* გამოიყენეთ საერთო სტილებისთვის */
 
-
-
-
+/* _________ HEADER _________ */
 #header-logo {
   width: 1288px;
   display: flex;
@@ -16,9 +14,7 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #e4e3eb;
- 
 }
- 
 #enter {
   color: #fff;
   font-family: FiraGO;
@@ -34,6 +30,5 @@ header {
 }
 #enter:hover {
   cursor: pointer;
-  background: #766CF1;
+  background: #766cf1;
 }
- 
