@@ -30,8 +30,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
   border-bottom: 1px solid #e4e3eb;
+  background: white;
 }
 
 #enter {
@@ -148,7 +148,7 @@ li {
   width: 64px;
   background: rgba(8, 210, 174, 0.08);
   color: #1ac7a8;
-}                           
+}
 
 .cards {
   width: 1288px;
@@ -208,7 +208,6 @@ span {
 .mutual-categories {
   display: flex;
   align-items: center;
- 
 }
 
 .about-title {
@@ -236,6 +235,13 @@ a {
   line-height: 20px;
 }
 
+
+#mutual-categories-lists {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
 
 
 

@@ -192,7 +192,7 @@ main {
   border-radius: 8px;
   background: #5d37f3;
 }
-.popup button p {
+.popup button a {
   color: #fff;
   font-family: FiraGO;
   font-size: 14px;
