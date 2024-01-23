@@ -1,3 +1,35 @@
+const stators = [
+  {
+    fullName: "ნია გოგსაძე",
+    releaseDate: "02.11.2023",
+    title: "EOMM-ის მრჩეველთა საბჭოს ნინო ეგაძე შეუერთდა",
+    categories: ["მარკეტი", "აპლიკაცია", "ხელოვნური ინტელექტი"],
+    about:
+      "6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი...",
+  },
+  {
+    fullName: " თორნიკე მამასახლისი",
+    releaseDate: "02.11.2023",
+    title: "მოსმენა ყველს უფრო გემრიელს ხდის?",
+    categories: ["UI/UX", "კვლევა"],
+    about:
+      "6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი...",
+  },
+  {
+    fullName: "კობა ბელთაძე",
+    releaseDate: "02.11.2023",
+    title:
+      "მობილური ფოტოგრაფიის კონკურსის გამარჯვებულთა ვინაობა ცნობილია. მ...",
+    categories: ["Figma", " UI/UX"],
+    about:
+      "6 თვის შემდეგ ყველის ბრმა დეგუსტაციის დროც დადგა. მაქსიმალური სიზუსტისთვის, ეს პროცესი...",
+  },
+];
+
+const mapped = stators.map((statia) => {
+  console.log(statia);
+});
+
 const image = Array.from(document.getElementsByClassName("image"));
 const blogSection = document.querySelector(".cards");
 const categorySection = document.querySelector(".categories");
@@ -126,3 +158,4 @@ okay.addEventListener("click", (e) => {
   e.preventDefault();
   login.style.display = "none";
 });
+
