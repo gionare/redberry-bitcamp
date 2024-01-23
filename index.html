@@ -27,18 +27,40 @@
         <button>Click Me</button>
     </div> -->
     <main>
-      <section id="categories">
-          <button id="market">მარკეტი</button>
-          <button id="application">აპლიკაცია</button>
-          <button id="ai">ხელოვნური ინტელექტი </button>
-          <button id="ui-ux">UI/UX</button>
-          <button id="research">კვლევა</button>
-          <button id="figma">Figma</button>
-      </section>
+      <div class="categories">
+          <button class="market">მარკეტი</button>
+          <button class="application">აპლიკაცია</button>
+          <button class="ai">ხელოვნური ინტელექტი </button>
+          <button class="ui-ux">UI/UX</button>
+          <button class="research">კვლევა</button>
+          <button class="figma">Figma</button>
+      </div>
       <section class="cards">
-        
-       
+      </section>
 
+      <section class="login">
+          <div class="exit">
+            <img src="./assets/add.svg" alt="">
+          </div>
+          <div class="login-header">
+          <h4>შესვლა</h4>
+         <form action="">
+          <label for="email">ელ-ფოსტა</label>
+          <input id="login-email" type="email" placeholder="Example@redberry.ge">
+          <section class="error">
+            <img src="./assets/info-circle.jpg" alt="">
+             <span id="error-message">ელ-ფოსტა არ მოიძებნა</span>
+          </section>
+         <button id="submit" type="submit">შესვლა</button> 
+         </form>
+        </div>
+        <section class="authorization">
+          <section class="text">
+            <img src="./assets/tick-circle.svg" alt="">
+            <h2>წარმატებული ავტორიზაცია</h2>
+          </section>
+             <button class="okay">კარგი</button>
+        </section>
       </section>
     </main>
 

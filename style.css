@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 header {
   width: 100%;
@@ -39,6 +40,7 @@ header {
   font-family: FiraGO;
   font-size: 14px;
   font-style: normal;
+  
   font-weight: 500;
   line-height: 20px;
   width: 93px;
@@ -69,6 +71,7 @@ h1 {
   line-height: 72px;
 }
 main {
+  position: relative;
   margin-top: 60px;
   display: flex;
   flex-direction: column;
@@ -77,24 +80,27 @@ main {
   gap: 10px;
 }
 
-#categories {
+.categories {
+  outline: none;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  border: none;
   gap: 24px;
 }
-ul {
+
+li {
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  list-style: none;
 }
 button{
+  cursor: pointer;
   display: flex;
-  justify-content: center;
-  align-items: center;
+justify-content: center;
+align-items: center;
   height: 32px;
   border-radius: 30px;
   font-family: FiraGO;
@@ -102,49 +108,39 @@ button{
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  border: none;
+ border: 0;
   text-align: center;
 }
-li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32px;
-  border-radius: 30px;
-  font-family: FiraGO;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  border: none;
-  text-align: center;
-}
-#market {
+
+.market {
   width: 83px;
   background: rgba(255, 184, 47, 0.08);
+
   color: #d6961c;
 }
-#application {
+
+
+.application {
   width: 97px;
   background: rgba(28, 214, 125, 0.08);
   color: #15c972;
 }
-#ai {
+.ai {
   width: 178px;
   background: rgba(177, 28, 214, 0.08);
   color: #b71fdd;
 }
-#ui-ux {
+.ui-ux {
   width: 65px;
   color: #dc2828;
   background: rgba(250, 87, 87, 0.08);
 }
-#research {
+.research {
   width: 77px;
   color: #60be16;
   background: rgba(112, 207, 37, 0.08);
 }
-#figma {
+.figma {
   width: 64px;
   background: rgba(8, 210, 174, 0.08);
   color: #1ac7a8;
@@ -208,6 +204,10 @@ span {
 .mutual-categories {
   display: flex;
   align-items: center;
+  gap: 5px;
+}
+ul{
+  list-style: none;
 }
 
 .about-title {
@@ -276,6 +276,126 @@ a {
   color: #1ac7a8;
 }
 
+
+.login{
+width: 480px;
+height: 272px;
+border-radius: 12px;
+background: #FFF;
+
+  gap: 8px;
+  display: none;
+align-items: center;
+flex-direction: column;
+position: absolute;
+top: -110px;
+
+}
+
+h4 {
+  color: #1A1A1F;
+text-align: center;
+font-family: FiraGO;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
+}
+.exit {
+  margin-top: 20px;
+   padding-left: 410px;
+   cursor: pointer;
+}
+.login-header {
+margin-top: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+input {
+  width: 432px;
+height: 44px;
+ border-radius: 12px;
+border: 1.5px solid #5D37F3;
+background: #F7F7FF;
+}
+
+form{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 15px;
+}
+#submit {
+  width: 432px;
+  height: 40px;
+border-radius: 8px;
+background: #5D37F3;
+color: #FFF;
+font-family: FiraGO;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+}
+.error {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  display: none;
+}
+#error-message {
+  color: #EA1919;
+font-family: FiraGO;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+}
+.authorization {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+
+.text {
+
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+h2 {
+
+  color: #1A1A1F;
+text-align: center;
+font-family: FiraGO;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px
+}
+.okay {
+  width: 432px;
+  height: 40px;
+border-radius: 8px;
+background: #5D37F3;
+color: #FFF;
+font-family: FiraGO;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+margin-top: 40px;
+}
 /* .logins{
   width: 400px;
   height: 300px;
