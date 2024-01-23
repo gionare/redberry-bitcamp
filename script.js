@@ -56,7 +56,7 @@ async function render() {
 <section class="title">
   <section class="title-author-releaseDate">
     <h5>${item.author}</h5>
-    <span>${item.publication_date}</span>
+    <span>${item.publish_date}</span>
   </section>
   <section class="title-heading">
 <h3>${item.title}</h3>
@@ -89,15 +89,15 @@ render();
 
 const enter = document.getElementById("enter");
 console.log(enter);
-
 const login = document.querySelector(".login");
 const exit = document.querySelector(".exit");
-
 const submit = document.querySelector("#submit");
-
 const loginHeader = document.querySelector(".login-header");
-
 const authorization = document.querySelector(".authorization");
+const emailInp = document.querySelector("#login-email")
+const errorMessage = document.querySelector("#error-message")
+
+
 enter.addEventListener("click", () => {
   login.style.display = "flex";
 });
@@ -106,11 +106,19 @@ exit.addEventListener("click", () => {
   login.style.display = "none";
 });
 
+
+
+
+
+
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  loginHeader.style.display = "none";
-  authorization.style.display = "flex";
-});
+  
+   
+    loginHeader.style.display = "none";
+    authorization.style.display = "flex";
+  })  
+
 
 const okay = document.querySelector(".okay");
 
