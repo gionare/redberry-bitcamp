@@ -26,10 +26,6 @@ const stators = [
   },
 ];
 
-const mapped = stators.map((statia) => {
-  console.log(statia);
-});
-
 const image = Array.from(document.getElementsByClassName("image"));
 const blogSection = document.querySelector(".cards");
 const categorySection = document.querySelector(".categories");
@@ -54,36 +50,15 @@ categorySection.addEventListener("click", (e) => {
   }
 });
 
-async function getUserData() {
-  try {
-    const response = await fetch("http://localhost:3000/data");
-    const data = await response.json();
-
-    console.log(data);
-    if (!response.ok) {
-      throw new Error("Failed to get data");
-    }
-
-    const filteredData = data.filter((item, index) =>
-      item.categories.find((item2) => item2.name === category)
-    );
-    if (filteredData.length === 0) return data;
-    return filteredData;
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-getUserData();
-
 async function render() {
-  const data = await getUserData();
+  const response = await fetch("https://george.pythonanywhere.com/api/blogs/");
+  const data = await response.json();
   console.log(data);
   let blogs = data
     .map(
       (item) => `<div class="card">
 <section class="image">
-<img src = "${item.image}" alt="">
+<img src = "${item.image}" style="width: 200px; height: 200px" alt="">
 </section>
 <section class="title">
   <section class="title-author-releaseDate">
@@ -126,9 +101,8 @@ const exit = document.querySelector(".exit");
 const submit = document.querySelector("#submit");
 const loginHeader = document.querySelector(".login-header");
 const authorization = document.querySelector(".authorization");
-const emailInp = document.querySelector("#login-email")
-const errorMessage = document.querySelector("#error-message")
-
+const emailInp = document.querySelector("#login-email");
+const errorMessage = document.querySelector("#error-message");
 
 enter.addEventListener("click", () => {
   login.style.display = "flex";
@@ -138,19 +112,21 @@ exit.addEventListener("click", () => {
   login.style.display = "none";
 });
 
-
-
-
-
-
-submit.addEventListener("click", (e) => {
+submit.addEventListener("click", async (e) => {
   e.preventDefault();
-  
-   
-    loginHeader.style.display = "none";
-    authorization.style.display = "flex";
-  })  
 
+  const response = await fetch("https://george.pythonanywhere.com/api/login/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: emailInp.value,
+    }),
+  });
+  const data = await response.json();
+  localStorage.setItem("token", data.token);
+});
 
 const okay = document.querySelector(".okay");
 
@@ -158,4 +134,3 @@ okay.addEventListener("click", (e) => {
   e.preventDefault();
   login.style.display = "none";
 });
-

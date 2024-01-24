@@ -32,7 +32,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  justify-items: center;
+  margin: auto;
   gap: 40px;
 }
 
